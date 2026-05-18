@@ -720,7 +720,7 @@ static unsigned long mremap_to(unsigned long addr, unsigned long old_len,
 				((addr - vma->vm_start) >> PAGE_SHIFT),
 				map_flags);
 	if (offset_in_page(ret))
-		goto out;
+		goto out1;
 
 	ret = move_vma(vma, addr, old_len, new_len, new_addr, locked, uf,
 		       uf_unmap);
